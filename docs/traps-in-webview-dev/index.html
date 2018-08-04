@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="zh">
+    <head>
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.5.2 -->
+    <script>
+        window.materialVersion = "1.5.2"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1',
+            '1.5.0'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- Title -->
+    
+    <title>
+        
+            移动端开发中的坑 | 
+        
+        C.Y.Xu&#39;s Scribble Wall
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
+    <link rel="icon" href="/img/favicon.png">
+
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="description" itemprop="description" content="I scribble here">
+    <meta name="keywords" content="C.Y.Xu">
+    <meta name="theme-color" content="#0097A7">
+
+    <!-- Disable Fucking Bloody Baidu Tranformation -->
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?MKetZV3cUTfDxvMffaOezg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+
+<!-- Import Material Icons -->
+
+
+    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","/js/jquery.min.js?ezyEvm8ST5CGfpA+kFFi1g==", true)</script>
+    
+
+    <!-- WebAPP Icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="C.Y.Xu&#39;s Scribble Wall">
+    <meta name="msapplication-starturl" content="https://blog.imxcy.com/traps-in-webview-dev/">
+    <meta name="msapplication-navbutton-color" content="#0097A7">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="C.Y.Xu&#39;s Scribble Wall">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="/img/favicon.png">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- RSS -->
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="https://blog.imxcy.com/traps-in-webview-dev/">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="移动端开发中的坑 | C.Y.Xu&#39;s Scribble Wall">
+    <meta property="og:image" content="/img/favicon.png">
+    <meta property="og:description" content="I scribble here">
+    
+
+    
+        <meta property="article:published_time" content="Fri Nov 04 2016 11:33:27 GMT+0800">
+        <meta property="article:modified_time" content="Sat Jan 07 2017 16:14:00 GMT+0800">
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="https://blog.imxcy.com/traps-in-webview-dev/index.html" />
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "https://blog.imxcy.com/traps-in-webview-dev/index.html",
+    "headline": "移动端开发中的坑",
+    "datePublished": "Fri Nov 04 2016 11:33:27 GMT+0800",
+    "dateModified": "Sat Jan 07 2017 16:14:00 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "C.Y.Xu",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/avatar.png"
+        },
+        "description": "Hi, nice to meet you"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "C.Y.Xu&#39;s Scribble Wall",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": "C.Y.Xu",
+    "description": "I scribble here",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+    
+    
+
+    <!-- Custom Head -->
+    
+
+</head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#爬虫抓取文字"><span class="post-toc-number">1.</span> <span class="post-toc-text">爬虫抓取文字</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#去掉默认点击效果"><span class="post-toc-number">2.</span> <span class="post-toc-text">去掉默认点击效果</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#淡腾的输入法和fixed元素"><span class="post-toc-number">3.</span> <span class="post-toc-text">淡腾的输入法和fixed元素</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#body上overflow-hidden失效"><span class="post-toc-number">4.</span> <span class="post-toc-text">body上overflow:hidden失效</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#伪元素-before-after并不是所有元素都支持"><span class="post-toc-number">5.</span> <span class="post-toc-text">伪元素 :before, :after并不是所有元素都支持!</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#在移动端retina屏幕实现真·1px边框"><span class="post-toc-number">6.</span> <span class="post-toc-text">在移动端retina屏幕实现真·1px边框</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#微信分享事件"><span class="post-toc-number">7.</span> <span class="post-toc-text">微信分享事件</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#textarea的placeholder不自动换行问题"><span class="post-toc-number">8.</span> <span class="post-toc-text">textarea的placeholder不自动换行问题</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#IOS上滑动不顺畅"><span class="post-toc-number">9.</span> <span class="post-toc-text">IOS上滑动不顺畅</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#父级元素中的transform-导致子元素position-fixed失效"><span class="post-toc-number">10.</span> <span class="post-toc-text">父级元素中的transform 导致子元素position:fixed失效</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#scroll事件触发"><span class="post-toc-number">11.</span> <span class="post-toc-text">scroll事件触发</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#flexbox最小内容宽高问题"><span class="post-toc-number">12.</span> <span class="post-toc-text">flexbox最小内容宽高问题</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#flex-wrap在ios8不被支持"><span class="post-toc-number">13.</span> <span class="post-toc-text">flex-wrap在ios8不被支持</span></a></li></ol>
+    </ul>
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        <!-- Custom Thumbnail -->
+        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(/traps-in-webview-dev/banner.jpg)">
+    
+            <p class="article-headline-p">
+                移动端开发中的坑
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>C.Y.Xu</strong>
+        <span>11月 04, 2016</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=移动端开发中的坑&url=https://blog.imxcy.com/traps-in-webview-dev/index.html&pic=https://blog.imxcy.com/img/favicon.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=移动端开发中的坑&url=https://blog.imxcy.com/traps-in-webview-dev/index.html&via=C.Y.Xu" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://blog.imxcy.com/traps-in-webview-dev/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=https://blog.imxcy.com/traps-in-webview-dev/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+        <a class="post_share-link" href="https://www.linkedin.com/shareArticle?mini=true&url=https://blog.imxcy.com/traps-in-webview-dev/index.html&title=移动端开发中的坑" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 LinkedIn
+            </li>
+        </a>
+    
+
+    <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=C.Y.Xu&#39;s Scribble Wall&title=移动端开发中的坑&summary=I scribble here&pics=https://blog.imxcy.com/img/favicon.png&url=https://blog.imxcy.com/traps-in-webview-dev/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 QQ
+            </li>
+        </a>
+    
+
+    <!-- Share Telegram -->
+    
+        <a class="post_share-link" href="https://telegram.me/share/url?url=https://blog.imxcy.com/traps-in-webview-dev/index.html&text=移动端开发中的坑" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Telegram
+            </li>
+        </a>
+    
+</ul>
+
+    
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <p>在我目前有限的几次webview开发中,遇到过一些坑,现在写下来,也不知道有没有用,实际上这些坑一般遇到过一次就应该不会再跳进去了.</p>
+<h3 id="爬虫抓取文字"><a href="#爬虫抓取文字" class="headerlink" title="爬虫抓取文字"></a>爬虫抓取文字</h3><p>页面后面添加个<strong>隐藏的p标签</strong>，补充些正常文字，让微博等爬链接的时候抓取（它们默认抓取页面最后的文字），避免把链接文字搞得莫名其妙 </p>
+<p>爬虫取到的页尾文字有时候会非常搞siao</p>
+<h3 id="去掉默认点击效果"><a href="#去掉默认点击效果" class="headerlink" title="去掉默认点击效果"></a>去掉默认点击效果</h3><p>在css中可以用<code>-webkit-tap-highlight-color: transparent</code>来去除手机上a元素等点击产生的阴影、长方形边框效果</p>
+<p>最好给body加上,否则监听body有可能导致ios点击闪动问题</p>
+<p>开发中遇到过一个实际问题是,监听整个body的点击事件,导致在ios上点击非可点区域时,该区域会产生灰色遮罩效果,加上<code>-webkit-tap-highlight-color: transparent</code>后解决</p>
+<h3 id="淡腾的输入法和fixed元素"><a href="#淡腾的输入法和fixed元素" class="headerlink" title="淡腾的输入法和fixed元素"></a>淡腾的输入法和fixed元素</h3><p>有position:fixed元素时，input onFocus弹出输入法时需要将fixed改为absolute，否则会定位偏移；输入法收起后再改回fixed。             </p>
+<p>如果策划想让input框fix在页面顶部，请拒绝这个需求吧，因为这样在ios上focus时会无法避免输入框抖动</p>
+<h3 id="body上overflow-hidden失效"><a href="#body上overflow-hidden失效" class="headerlink" title="body上overflow:hidden失效"></a>body上overflow:hidden失效</h3><p>移动端在body上设置<code>overflow:hidden</code>无效，似乎是因为浏览器在解析<code>&lt;meta name=&quot;viewport&quot;&gt;</code>标签的时候会忽略html和body上的overflow属性。</p>
+<p>可以加个wrapper将需要禁止滚动的内容<strong>包裹</strong>起来，在wrapper上设置<code>overflow:hidden</code></p>
+<h3 id="伪元素-before-after并不是所有元素都支持"><a href="#伪元素-before-after并不是所有元素都支持" class="headerlink" title="伪元素 :before, :after并不是所有元素都支持!"></a>伪元素 :before, :after并不是所有元素都支持!</h3><p>毕竟指的是在元素中的内容前后添加，以下元素本身不能包裹内容，遇到需要添加伪元素的情况时只能在外层包括div                  </p>
+<blockquote>
+<p>IE 不支持的元素有：img，input，select，textarea<br>FireFox 不支持的元素有：input，select，textarea<br>Chrome 不支持的元素有：input[type=text]，textarea      </p>
+</blockquote>
+<p><em>chrome的input[type=checkbox]等支持伪元素简直就是个bug啊！！！</em></p>
+<h3 id="在移动端retina屏幕实现真·1px边框"><a href="#在移动端retina屏幕实现真·1px边框" class="headerlink" title="在移动端retina屏幕实现真·1px边框"></a>在移动端retina屏幕实现真·1px边框</h3><p>对于retina屏幕，dpr=2，代码中的像素数都会以*2的结果显示在屏幕上，也就是说1px会被显示成2px。<br>那我们暂时还不太能写成0.5px，于是要实现1px边框只能这么做：</p>
+<pre><code class="css">.border-1px {
+    position: relative;
+}
+.border-1px:after {
+    border: 1px solid #c8c7cc;
+    position: absolute; 
+    content: &#39;&#39;; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+}
+
+/* if border-radius is needed */
+.border-1px, .border-1px:after {
+    border-radius: 4px;
+}
+
+/* for dpr &gt;= 2 利用缩放 */
+@media screen and (-webkit-min-device-pixel-ratio: 2){
+    .border-1px:after {
+        width: 200%; 
+        height: 200%;
+        -webkit-transform: scale(0.5); 
+        -ms-transform: scale(0.5); 
+        transform: scale(0.5);
+        -webkit-transform-origin: top left; 
+        -ms-transform-origin: top left; 
+        transform-origin:top left;
+    }
+    /* if border-radius is needed */
+    .border-1px:after {
+        border-radius: 8px;
+    }
+}           
+</code></pre>
+<h3 id="微信分享事件"><a href="#微信分享事件" class="headerlink" title="微信分享事件"></a>微信分享事件</h3><p>自定义微信分享的图片和标题等信息：</p>
+<pre><code class="js">var weChatShare = function() {
+  document.addEventListener(&#39;WeixinJSBridgeReady&#39;, function () {
+      // 发送给好友;
+      WeixinJSBridge.on(&#39;menu:share:appmessage&#39;, function (argv) {
+          WeixinJSBridge.invoke(&#39;sendAppMessage&#39;, {
+              &quot;appid&quot;:      &#39;&#39;,
+              &quot;img_url&quot;:    &#39;&#39;, // 分享图片的地址
+              &quot;img_width&quot;:  &#39;&#39;, 
+              &quot;img_height&quot;: &#39;&#39;,
+              &quot;link&quot;:       &#39;&#39;, // 分享链接的地址
+              &quot;desc&quot;:       &#39;&#39;, // 描述
+              &quot;title&quot;:      &#39;&#39;  // 标题 
+          }, _.noop);
+      });
+      // 分享到朋友圈;
+      WeixinJSBridge.on(&#39;menu:share:timeline&#39;, function (argv) {
+          WeixinJSBridge.invoke(&#39;shareTimeline&#39;, {
+              &quot;img_url&quot;:    &#39;&#39;, // 分享图片的地址
+              &quot;img_width&quot;:  &#39;&#39;, 
+              &quot;img_height&quot;: &#39;&#39;,
+              &quot;link&quot;:       &#39;&#39;, // 分享链接的地址
+              &quot;desc&quot;:       &#39;&#39;, // 描述
+              &quot;title&quot;:      &#39;&#39;  // 标题 
+          }, _.noop);
+      });
+  }, false);
+};
+</code></pre>
+<h3 id="textarea的placeholder不自动换行问题"><a href="#textarea的placeholder不自动换行问题" class="headerlink" title="textarea的placeholder不自动换行问题"></a>textarea的placeholder不自动换行问题</h3><p>textarea的placeholder文字如果过长，在安卓4.3以下(not very sure)不会自动换行，即会显示不全。<br>最好的解决办法是在textarea后添加span标签来显示placeholder，然后用js控制placeholder的显隐。</p>
+<h3 id="IOS上滑动不顺畅"><a href="#IOS上滑动不顺畅" class="headerlink" title="IOS上滑动不顺畅"></a>IOS上滑动不顺畅</h3><p>IOS上滑动不顺畅，卡，甚至导致页面无法滚动，可以在<strong>滚动元素</strong>上添加<code>-webkit-overflow-scrolling: touch</code> 丝般顺滑，搞定！ </p>
+<p>但是在滚动元素上加<code>-webkit-overflow-scrolling: touch</code>还有个bug：<br>当该元素中有<code>position: relative</code>元素时，可能会出现页面内容消失的情况。<br>解决的办法是给该元素加上<code>-webkit-transform: translate3d(0, 0, 0)</code>，强制开启硬件加速。</p>
+<p>所以解决滑动不顺畅问题一般得在滚动元素上写两个：<code>-webkit-overflow-scrolling: touch; -webkit-transform: translate3d(0, 0, 0)</code></p>
+<h3 id="父级元素中的transform-导致子元素position-fixed失效"><a href="#父级元素中的transform-导致子元素position-fixed失效" class="headerlink" title="父级元素中的transform 导致子元素position:fixed失效"></a>父级元素中的transform 导致子元素position:fixed失效</h3><p>要是一个fixed元素的父级元素中有使用transform,那么这个元素的fixed会失效。</p>
+<p>这是一个浏览器bug，浏览器目前不能同时render这两种属性。只能尽量避免出现这种情况。</p>
+<h3 id="scroll事件触发"><a href="#scroll事件触发" class="headerlink" title="scroll事件触发"></a>scroll事件触发</h3><p>scroll事件在Android中会触发多次（在滚动时），而在IOS只触发一次（最后滚动停止时）</p>
+<ul>
+<li><p>android: 手指接触屏幕(touchstart)-&gt;滚动(touchmove,同时scroll,频率比move高)-&gt;手指离开屏幕(touchend)-&gt;惯性滚动(scroll*N)-&gt;惯性滚动停止(scroll)</p>
+</li>
+<li><p>ios: 手指接触屏幕(touchstart)-&gt;滚动(touchmove)-&gt;手指离开屏幕(touchend)-&gt;惯性滚动(真空,无法监听)-&gt;惯性滚动停止(scroll*1)</p>
+</li>
+</ul>
+<p>那么要如何兼容监听<strong>滚动停止</strong>事件：</p>
+<pre><code class="js">var timer = null;
+$(window).addEventListener(&#39;scroll&#39;, function() {
+    if(timer !== null) {
+        clearTimeout(timer);        
+    }
+    timer = setTimeout(function() {
+        // do something
+    }, 150);
+}, false);
+</code></pre>
+<h3 id="flexbox最小内容宽高问题"><a href="#flexbox最小内容宽高问题" class="headerlink" title="flexbox最小内容宽高问题"></a>flexbox最小内容宽高问题</h3><p><a href="https://www.w3.org/TR/css-flexbox/#flex-common" target="_blank" rel="noopener">flex的官方描述</a>里有一段话：</p>
+<blockquote>
+<p>By default, flex items won’t shrink below their minimum content size (the length of the longest word or fixed-size element).<br>To change this, set the min-width or min-height property.</p>
+</blockquote>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/min-width" target="_blank" rel="noopener">min-width文档</a>说:</p>
+<blockquote>
+<p>对于flex items，min-width默认值是auto的，<br><code>min-width:auto</code>对于flex items的值是min-content，对于其他元素的值是0.</p>
+</blockquote>
+<p>但实际上，几乎所有的主流浏览器都没有遵循以上约定。在Chrome, Opera, 和Safari上，浏览器允许flex items的宽高缩小到0。<br>也就是说在flex shrink的时候这些items可能会被压缩，造成overlapping样式显示错误。</p>
+<p>解决办法就是给flex items加上具体的min-width、min-height值。</p>
+<h3 id="flex-wrap在ios8不被支持"><a href="#flex-wrap在ios8不被支持" class="headerlink" title="flex-wrap在ios8不被支持"></a>flex-wrap在ios8不被支持</h3><p>不要使用flex-wrap. 在ios8(更低没测过)上,元素没有按预期地换行显示</p>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 gitcoment -->
+<div id="gitment-comment">
+    <!-- Gitment 评论框 -->
+<div id="container"></div>
+</div>
+<style>
+    #gitment-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+    var gitment = new Gitment({
+        //id: '页面 ID', // 可选。默认为 location.href
+        owner: 'xuchaoying',
+        repo: 'imxcy',
+        oauth: {
+            client_id: '1963d2aff889cd890669',
+            client_secret: 'd77e1e6b699d7b3771617d0737db41bc9754036d',
+        },
+    })
+    gitment.render('container')
+</script>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/explore-webp/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/recipes-my-parents-taught-me/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/avatar.png" alt="C.Y.Xu's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        itsxcy@gmail.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="mailto:itsxcy@gmail.com" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    归档
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2018/01/">一月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/02/">二月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/11/">十一月 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/09/">九月 2016<span class="sidebar_archives-count">1</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+
+    <!-- Pages  -->
+    
+        <li>
+            <a href="/about" title="关于我">
+                
+                关于我
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/links" title="友情链接">
+                
+                友情链接
+            </a>
+        </li>
+        
+    
+
+    <!-- Article Number  -->
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+    <div class="sidebar-divider"></div>
+
+
+<!-- Theme Material -->
+
+    <a href="https://github.com/viosey/hexo-theme-material"  class="sidebar-footer-text-a" target="_blank">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+            主题 - Material
+            <span class="sidebar-badge badge-circle">i</span>
+        </div>
+    </a>
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+        <a href="https://twitter.com/itscherryhsu" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-twitter">
+                <span class="visuallyhidden">Twitter</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Facebook -->
+    
+
+    <!-- Google + -->
+    
+
+    <!-- Weibo -->
+    
+        <a href="http://weibo.com/cherrycullen" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-weibo">
+                <span class="visuallyhidden">Weibo</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Instagram -->
+    
+        <a href="https://www.instagram.com/c.y.xu/" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-instagram">
+                <span class="visuallyhidden">Instagram</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+        <a href="https://github.com/xuchaoying" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+        <a href="https://www.zhihu.com/people/xu-chao-ying-3/" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-zhihu">
+                <span class="visuallyhidden">Zhihu</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+    
+    <!-- V2EX -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©<script type="text/javascript">var fd = new Date();document.write("&nbsp;" + fd.getFullYear() + "&nbsp;");</script>C.Y.Xu's Scribble Wall
+            
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?wgjW/HuQG9JDgvPDPoRAng==", true)</script>
+
+
+
+    <script>lsloader.load("js_js","/js/js.min.js?V/53wGualMuiPM3xoetD5Q==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+
+
+
+
+   <!-- Gitment -->
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Import prettify js  -->
+
+
+    
+        <script>lsloader.load("hanabi","/js/hanabi-browser-bundle.js?5+2z7ZZmFuZK5IcimlZbxw==", true)</script>
+    
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+    
+        
+        
+        HanabiBrowser.start('pre code',true);
+    
+</script>
+
+<!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.2 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        </body>
+    
+</html>
